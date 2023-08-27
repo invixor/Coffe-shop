@@ -1,0 +1,530 @@
+@import '../styles/null.scss';
+
+
+//----------general----------
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+
+._container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: content-box;
+}
+
+._hidden{
+    display: none;
+}
+
+
+@mixin fontStyle ($fs,$fw,$lh,$clr) {
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $clr;
+}
+
+@mixin flexStyle ($fl, $jc, $ai, $ta) {
+    display: $fl;
+    justify-content: $jc;
+    align-items: $ai;
+    text-align: $ta;
+}
+
+
+
+//----------/general----------
+
+
+//----------header----------
+
+.header{
+
+    background: transparent;
+    padding: 52px 0px 0px 179px;
+    z-index: 99999;
+    @media (max-width: 768px) {
+        padding: 26px 0px;
+        
+    }
+    &__container{
+
+    }
+    &__body{
+        @include flexStyle(flex, start, start, center);
+        gap:40px;
+        z-index: 999999;
+        @media (max-width:768px){
+            justify-content: center;
+        }
+    }
+    &__item{
+        a{
+            @include fontStyle(12px, 400, normal, #fff);
+        }
+    }
+}
+
+//----------/header----------
+
+
+//----------main----------
+
+.main{
+    width: 100%;
+    background: url("../components/main/back.png") center no-repeat;
+    background-size: cover;
+    padding: 181px 0px 200px;
+    transform: translateY(-70px);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    &__container{
+
+    }
+    &__body{
+        margin: 0 auto;
+        text-align: center;
+       
+    }
+    &__title{
+        margin-bottom: 35px;
+        h1{
+            @include fontStyle(40px, 700, 100%, #fff);
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin-bottom: 20px;
+        }
+
+    }
+    &__text{
+        @include fontStyle(24px, 700, 100%, #fff);
+    
+        button{
+            display: block;
+            margin: 18px auto 0;
+            padding: 5px 42px 10px;
+            @include fontStyle(14px, 700, 100%, #fff);
+            border-radius: 3px;
+            border: 1px solid #FFF;
+            background: rgba(196, 196, 196, 0.00);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+        }
+    }
+}
+
+.main_coffee{
+    background: url(../components/coffePics/coffee_img.png) center no-repeat;
+    background-size: cover;
+    padding: 180px 0px 84px;
+}
+.main_pleasure{
+    background: url(../components/coffePics/pleasure-back.png) center no-repeat;
+    background-size: cover;
+    padding: 180px 0px 84px;
+}
+
+
+//----------/main----------
+
+
+//----------about----------
+
+.about{
+    padding-bottom: 30px;
+    &__body{
+        text-align: center;
+    }
+    &__title{
+        margin-bottom: 15px;
+        h1{
+            @include fontStyle(24px, 400, 100%, #000);
+            margin-bottom: 20px;
+        }
+    }
+    &__text{
+        @include fontStyle(100%, 400, 120%, #000);
+    }
+    }
+   
+    
+    
+   
+
+
+
+
+//----------/about----------
+
+
+//----------coffeListItem----------
+
+.coffe-list__item{
+
+}
+.item{
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 8px;
+    padding: 25px 30px;
+    width: 40%;
+    text-align: center;
+    cursor: pointer;
+    @media (max-width:768px){
+        width: 100%;
+    }
+    
+    &__pic{
+        margin-bottom: 14px;
+        img{
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__prop{
+        text-align: end;
+        @media (max-width: 768px){
+            text-align: center;
+        }
+        @include fontStyle(14px, 700, 100%, #000);
+        h2{
+            @include fontStyle(14px, 400, 100%, #000);
+            
+            margin-bottom: 15px;
+        }
+    }
+}
+
+//----------/coffeListItem----------
+
+
+//----------ourBest----------
+.best{
+    padding: 80px 0px 110px;
+    background: url(../components/ourBest/back.png) center no-repeat;
+    background-size: cover;
+    &__body{
+        
+    }
+    &__title{
+        text-align: center;
+        h1{
+            @include fontStyle(24px, 400, normal, #000);
+            margin-bottom: 39px;
+        }
+    }
+    &__list{
+        @include flexStyle(flex, space-between, center, start);
+        gap: 50px;
+        @media (max-width:1024px){
+            gap: 20px;
+        }
+        @media (max-width:768px){
+            flex-direction: column;
+        }
+    }
+}
+
+
+//----------/ourBest----------
+
+
+//----------footer----------
+
+.footer{
+    padding: 52px 0px 20px;
+    &__body{
+        
+    }
+    &__list{
+        @include flexStyle(flex, center, center, center);
+        gap:40px;
+        z-index: 999999;
+        margin-bottom: 30px;
+        @media (max-width:320px){
+            gap: 20px;
+        }
+    }
+    &__item{
+        @include fontStyle(12px, 400, normal, #000);
+        cursor: pointer;
+    }
+    &__logo{
+        text-align: center;
+    }
+
+}
+
+
+
+//----------/footer----------
+
+
+
+//----------product----------
+ .product{
+    padding-bottom: 52px;
+    @media (max-width:768px){
+        padding-bottom: 26px;
+    }
+    &__container{
+
+    }
+
+    &__body{
+        @include flexStyle(flex, space-between, flex-start, start);
+        gap: 7%;
+        @media (max-width:768px){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__img{
+        @media (max-width: 768px){
+            margin-bottom: 25px;
+        }
+        img{
+            height: 100%;
+            object-fit: contain;
+            @media (max-width: 425px){
+                width: 100%;
+            }
+        }
+    }
+
+    &__description{
+
+    }
+ }
+
+ .description{
+
+    &__title{
+        text-align: center;
+        margin-bottom: 25px;
+        h1{
+            @include fontStyle(24px, 400, normal, #000);
+            margin-bottom: 21px;
+        }
+    }
+
+    &__text{
+       
+    }
+ }
+
+ .text{
+    
+    &__item{
+        @include fontStyle(14px, 400, normal, #000);
+        span{
+            font-weight: 700;
+        }
+        h2{
+            display: inline;
+            font-size: 24px;
+        }
+        &:not(:last-child){
+            margin-bottom: 16px;
+        }
+    }
+ }
+
+
+
+
+//----------/product----------
+
+
+//----------our-coffee----------
+
+.our-coffee{
+    &::after{
+        content: "";
+        height: 1px;
+        width: 20%;
+        background: #000;
+        margin: 57px auto 0px;
+        display: block;
+    }
+    &__container{}
+    &__body{
+        @include flexStyle(flex, space-between, flex-start, center);
+        gap: 7%;
+        
+    }
+    &__img{
+        @media (max-width:768px){
+            display: none;
+        }
+        img{
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__article{}
+}
+
+.article{
+    &__title{
+        margin-bottom: 25px;
+        h1{
+            @include fontStyle(24px, 400, normal, #000);
+            margin-bottom: 20px;
+        }
+    }
+    &__text{
+        @include fontStyle(14px, 400, normal, #000);
+    }
+}
+
+
+
+//----------/our-coffee----------
+
+
+//----------coffee-list----------
+
+.coffee-list{
+    padding: 60px 0px;
+    &__container{
+
+    }
+    &__body{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 7%;
+        row-gap: 60px;
+
+        @media (max-width: 768px){
+            column-gap: 3%;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: 425px) {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 25px;
+        }
+    }
+}
+
+.all-item{
+    padding: 37px 27px 22px;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    &__pic{
+        margin-bottom: 15px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+        
+    }
+
+    &__prop{
+        text-align: right;
+        @include fontStyle(14px, 400, normal, #000);
+        h2{
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        span{
+            font-weight: 700;
+        }
+
+    }
+}
+
+
+//----------/coffee-list----------
+
+
+
+//----------control panel----------
+
+.panel{
+    padding: 60px 0;
+    &__container{}
+    &__body{
+        @include flexStyle(flex, start, flex-start, start);
+        gap: 5%;
+        @media (max-width:768px){
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.search-panel{
+    input{
+        @include fontStyle(12px, 400, normal, rgba(0,0,0,0.5));
+        font-family: 'Merienda', cursive;
+        @media (max-width: 768px){
+            margin-bottom: 25px;
+        }
+    }
+    &__search{
+        padding: 6px 36px;
+        box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        @include fontStyle(12px, 400, normal, rgba(0,0,0,0.5));
+        font-family: 'Merienda', cursive;
+        margin-left: 20px;
+        @media (max-width: 425px){
+            margin-left: 10px;
+            padding: 6px 15px;
+        }
+        }
+}
+
+.filter{
+    @include flexStyle(flex, start, center, center);
+    gap: 5px;
+    
+}
+.filter-button{
+    padding: 7px 20px 5px;
+    @include fontStyle(12px, 400, normal, #000);
+    border-radius: 4px 0px 0px 4px;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    background: #FFF;
+    font-family: 'Merienda', cursive;
+    cursor: pointer;
+    &:nth-child(1){
+        margin-left: 35px;
+        @media (max-width: 425px){
+            margin-left: 10px;
+        }
+    }
+
+    &_active{
+        padding: 7px 20px 5px;
+        @include fontStyle(12px, 400, normal, #000);
+        border-radius: 4px 0px 0px 4px;
+        box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
+        background: green;
+        font-family: 'Merienda', cursive;
+        cursor: pointer;
+        &:nth-child(1){
+            margin-left: 35px;
+            @media (max-width: 425px){
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+
+
+//----------/control panel----------
